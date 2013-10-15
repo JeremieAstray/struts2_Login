@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="login" namespace="/" extends="struts-default">
+    	<action name="loginpage">
+            <result>/login/login.jsp</result>
+        </action>
+        <action name="loginout" class="com.kuyetinghai.struts.login.loginout" >
+        <result type="redirectAction">index</result>
+        </action>
+        <action name="login" class="com.kuyetinghai.struts.login.Login" method="login">
+            <result name="success">/login/success.jsp</result>
+            <result name="error">/login/error.jsp</result>
+        </action>	
+    </package>
+    <!-- Add packages here -->
+
+</struts>
